@@ -81,10 +81,12 @@
                       download: true,
                       header: true,
                       complete: function(results) {
-                      var tools = ich.tools(results.data)
-                      console.log(tools)
+                      var data = results.data
+                      console.log(data)
                       }
                     })
+	            var tools = ich.tools(data)
+		    console.log(tools)
 		  })
                   
 		</script>
