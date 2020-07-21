@@ -71,18 +71,20 @@
 		{{/rows}}
 		</script>
 
-		<script type="text/javascript">
-		  document.addEventListener('DOMContentLoaded', function() {
-	            //var URL = "2PACX-1vTSSkEnj-ZdGlqQpVcdOCA4O2J7Mqj02hRz5WQEXKQ4RcJAJ8iWTLAkiyUj2rg_UC_563tus4x3njob"
-	            //Tabletop.init( { key: URL, callback: initialize, simpleSheet: true } )
-		    Papa.parse('https://docs.google.com/spreadsheets/d/e/2PACX-1vTSSkEnj-ZdGlqQpVcdOCA4O2J7Mqj02hRz5WQEXKQ4RcJAJ8iWTLAkiyUj2rg_UC_563tus4x3njob/pub?output=csv', {
+		
+		
+                <script type="text/javascript">
+		  function init() {
+                    Papa.parse('https://docs.google.com/spreadsheets/d/e/2PACX-1vTSSkEnj-ZdGlqQpVcdOCA4O2J7Mqj02hRz5WQEXKQ4RcJAJ8iWTLAkiyUj2rg_UC_563tus4x3njob/pub?output=csv', {
                       download: true,
                       header: true,
                       complete: function(results) {
                         var data = results.data
                         console.log(data)
                       }
-	            })
+                    });
+		  }
+                  window.addEventListener('DOMContentLoaded', init)
 		</script>
 	</body>
 </html>
