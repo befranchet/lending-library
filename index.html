@@ -81,7 +81,7 @@
                       download: true,
                       header: true,
                       complete: function(results) {
-                      var tools = results.data
+                      var tools = ich.tools(results.data)
                       console.log(tools)
                       }
                     })
